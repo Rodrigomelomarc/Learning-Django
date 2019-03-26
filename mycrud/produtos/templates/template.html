@@ -11,7 +11,28 @@
 </head>
 
 <body>
+
     <div class="container">
+
+        <nav class="navbar navbar-dark bg-dark">
+
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lista_produtos' %}">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cadastro_produtos' %}">Cadastro de produto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre</a>
+                </li>
+            </ul>
+
+        </nav>
+
         {% block content %}{% endblock %}
     </div>
 </body>

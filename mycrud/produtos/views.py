@@ -26,3 +26,9 @@ def adiciona_produtos(request):
         return redirect('lista_produtos')
 
     return render(request, 'cadastro_produtos.html')
+
+
+def remover(request, id):
+    produto = Produtos.objects.get(id=id)
+    produto.delete()
+    return redirect('lista_produtos')

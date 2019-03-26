@@ -1,0 +1,24 @@
+{% extends "template.html" %}
+{% block content %}
+<h1>Cadastro de Produtos</h1>
+<form method="POST" action="/adiciona-produto">
+    {% csrf_token %}
+    <div class="form-group">
+        <label>Nome</label>
+        <input class="form-control" type="text" name="nome">
+    </div>
+    <div class="form-group">
+        <label>Preço</label>
+        <input class="form-control" type="number" name="preco">
+    </div>
+    <div class="form-group">
+        <label>Categoria</label>
+        <input class="form-control" type="text" name="categoria">
+    </div>
+    <div class="form-group">
+        <label>Descição</label>
+        <textarea class="form-control" name="descricao" cols="30" rows="10"></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit">Cadastrar</button>
+</form>
+{% endblock %}

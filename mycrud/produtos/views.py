@@ -28,7 +28,24 @@ def adiciona_produtos(request):
     return render(request, 'cadastro_produtos.html')
 
 
-def remover(request, id):
+def remover_produtos(request, id):
     produto = Produtos.objects.get(id=id)
     produto.delete()
     return redirect('lista_produtos')
+
+
+def atualiza_produto(request, id):
+    produto = Produtos.objects.get(id=id)
+    form = ProdutosForm(request.POST or None, instance=produto)
+
+    if form.is_valid:
+        form.save()
+        messages.success(request, 'Produto atualizado com sucesso')
+        return redirect('lista_produtos')
+
+    return render(request, 'atualiza-form.html')
+
+
+def atualiza_form(request, id):
+    produto = Produtos.objects.get(id=id)
+    return render(request, 'atualiza-form.html', {'produto': produto})

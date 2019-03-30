@@ -31,7 +31,7 @@
             <td>{{ produto.descricao }}</td>
             <td>
                 <a href="{% url 'remover' id=produto.id %}">Remover</a>
-                <a href="#">Modificar</a>
+                <a href="{% url 'atualiza_form' id=produto.id %}">Modificar</a>
             </td>
         </tr>
         {% endfor %}

@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "/home/rodrigo/.local/share/virtualenvs/Learning-Django-uDVA8X63/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.pylamaEnabled": true,
+    "python.linting.enabled": true
+}

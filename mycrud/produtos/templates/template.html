@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../static/css/normalize.css">
-    <link rel="stylesheet" href="../static/css/bootstrap.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/normalize.css" />
+    <link rel="stylesheet" href="../static/css/bootstrap.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
+      <nav class="navbar navbar-dark bg-dark">
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'lista_produtos' %}">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'adiciona_produtos' %}"
+              >Cadastro de produto</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre</a>
+          </li>
+        </ul>
+      </nav>
 
-        <nav class="navbar navbar-dark bg-dark">
-
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index' %}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'lista_produtos' %}">Produtos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'cadastro_produtos' %}">Cadastro de produto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
-                </li>
-            </ul>
-
-        </nav>
-
-        {% block content %}{% endblock %}
+      {% block content %}{% endblock %}
     </div>
-</body>
-
+  </body>
 </html>
